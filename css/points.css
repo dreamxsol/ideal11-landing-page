@@ -1,173 +1,179 @@
+.fielding-points-ui * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    .fielding-points-ui * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+.fielding-points-ui {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    padding-bottom: 30px;
+}
 
-    .fielding-points-ui {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      padding-bottom: 30px;
-    }
+.top-context {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+}
 
-    .top-context {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 20px;
-      text-align: center;
-    }
+.top-context h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-    .top-context h2 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+.top-context p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
 
-    .top-context p {
-      color: #555;
-      font-size: 16px;
-      line-height: 1.5;
-    }
+.fielding-tabs-wrapper {
+    width: 100%; /* Ensure the wrapper takes the full width of its parent */
+}
 
-    .fielding-tabs-wrapper {
-      height: 60px;
-    }
+.fielding-tabs {
+    width: 100%; /* Ensure the tabs container spans the full width */
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Align tabs to the left for consistent scrolling */
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: nowrap; /* Prevent tabs from wrapping to the next line */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
+}
 
-    .fielding-tabs {
-      position: absolute;
-      top: auto;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px 0;
-      transition: all 0.3s;
-    }
+.fielding-tabs.sticky {
+    position: fixed;
+    top: 80px;
+}
 
-    .fielding-tabs.sticky {
-      position: fixed;
-      top: 80px;
-    }
+.fielding-tab {
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #003366;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+    flex-shrink: 0; /* Prevent tabs from shrinking, ensuring full visibility */
+}
 
-    .fielding-tab {
-      border: 2px solid #ccc;
-      border-radius: 30px;
-      padding: 8px 20px;
-      cursor: pointer;
-      font-weight: 500;
-      color: #003366;
-      background-color: #fff;
-      transition: all 0.3s ease;
-    }
+.fielding-tab.active {
+    border-color: red;
+    color: red;
+    font-weight: bold;
+}
 
-    .fielding-tab.active {
-      border-color: red;
-      color: red;
-      font-weight: bold;
-    }
+.fielding-points-container {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    scroll-margin-top: 120px; /* navbar height + tabs height */
+    margin-top: 50px;
+}
 
-    .fielding-points-container {
-      max-width: 800px;
-      margin: auto;
-      margin-bottom: 40px;
-      background: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-        scroll-margin-top: 120px; /* navbar height + tabs height */
-        margin-top: 50px;
+.fielding-points-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #003366, #0055a5);
+    color: #fff;
+}
 
-    }
+.fielding-points-header h2 {
+    font-size: 26px;
+    color: #ffffff;
+}
 
-    .fielding-points-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background: linear-gradient(to right, #003366, #0055a5);
-      color: #fff;
-    }
+.fielding-points-header p {
+    font-size: 14px;
+    opacity: 0.9;
+    color: #ccc;
+}
 
-    .fielding-points-header h2 {
-      font-size: 26px;
-      color:#ffffff;
-    }
+.fielding-points-table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-    .fielding-points-header p {
-      font-size: 14px;
-      opacity: 0.9;
-      color: #ccc;
-    }
+.fielding-points-table td {
+    padding: 16px;
+    border-top: 1px solid #eee;
+    font-size: 16px;
+    color: #333;
+}
 
-    .fielding-points-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+.fielding-points-table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: #2e7d32;
+}
 
-    .fielding-points-table td {
-      padding: 16px;
-      border-top: 1px solid #eee;
-      font-size: 16px;
-      color: #333;
-    }
+.fielding-points-important {
+    padding: 20px;
+}
 
-    .fielding-points-table td:last-child {
-      text-align: right;
-      font-weight: bold;
-      color: #2e7d32;
-    }
+.fielding-points-important h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #003366;
+}
 
-    .fielding-points-important {
-      padding: 20px;
-    }
+.fielding-points-important ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
 
-    .fielding-points-important h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
-      color: #003366;
-    }
+.fielding-points-important li {
+    margin-bottom: 10px;
+    color: #555;
+}
 
-    .fielding-points-important ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    .fielding-points-important li {
-      margin-bottom: 10px;
-      color: #555;
-    }
-
-    .fielding-points-icon {
-      width: 64px;
-      height: auto;
-      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
-    }
-
+.fielding-points-icon {
+    width: 64px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
 
 .fielding-points-table tr.positive-row {
-  background-color: #ecfaf1;
-  color: #2e7d32;
+    background-color: #ecfaf1;
+    color: #2e7d32;
 }
 
 .fielding-points-table tr.negative-row {
-  background-color: #fbf2f2;
-  color: #c62828;
+    background-color: #fbf2f2;
+    color: #c62828;
 }
 
-    .fielding-points-table td.negative-point {
-   
-      color: #d32f2f;
-    }
+.fielding-points-table td.negative-point {
+    color: #d32f2f;
+}
 
-
-    @media (max-width: 600px) {
-      .fielding-points-header {
+@media (max-width: 600px) {
+    .fielding-points-header {
         flex-direction: column;
         align-items: flex-start;
-      }
     }
+
+    .fielding-tabs {
+        justify-content: flex-start; /* Keep tabs aligned to the left */
+        padding: 10px 0; /* Reduce padding for better fit */
+    }
+
+    .fielding-tab {
+        padding: 8px 15px; /* Reduce padding slightly for smaller screens */
+        font-size: 14px; /* Adjust font size for readability and fit */
+    }
+}
