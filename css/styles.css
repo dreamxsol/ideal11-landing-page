@@ -430,6 +430,11 @@ a:hover {
 	padding-bottom: 4em;
 	background-color: #ffffff;
 	text-align: center;
+	background-image: url('../images/ideal11bg.webp');
+	background-color: rgba(47, 42, 42, 0.7); /* Overlay color */
+  background-blend-mode: multiply; /* Or other blend modes like overlay, screen, etc. */
+  background-size: cover;
+  background-position: center;
 }
 
 .header .decoration-star {
